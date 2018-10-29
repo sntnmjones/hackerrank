@@ -44,7 +44,7 @@ string timeConversion(string s)
     }
 
     /* Take string of hours, and if needed convert to int and add 12. */
-    if (ampm == "PM")
+    if (ampm == "PM" && hour != "12")
     {
         unsigned int hr = stoi(hour);
         hr += 12;
