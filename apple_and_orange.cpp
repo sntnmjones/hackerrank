@@ -16,7 +16,26 @@ vector<string> split_string(string);
  */ 
 void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges)
 {
+    int apples_on_house = 0;
+    for (auto apple : apples)
+    {
+        if (a + apple >= s)
+        {
+            apples_on_house++;
+        }
+    }
 
+    int oranges_on_house = 0;
+    for (auto orange : oranges)
+    {
+        if (b - orange <= t)
+        {
+            oranges_on_house++;
+        }
+    }
+    
+    cout << apples_on_house << endl;
+    cout << oranges_on_house << endl;
 }
 
 int main()
