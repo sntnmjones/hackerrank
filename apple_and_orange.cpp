@@ -19,7 +19,7 @@ void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vecto
     int apples_on_house = 0;
     for (auto apple : apples)
     {
-        if (a + apple >= s)
+        if ((a + apple >= s) && (a + apple <= t))
         {
             apples_on_house++;
         }
@@ -28,18 +28,25 @@ void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vecto
     int oranges_on_house = 0;
     for (auto orange : oranges)
     {
-        if (b - orange <= t)
+        if ((b + orange <= t) && (b + orange >= s))
         {
             oranges_on_house++;
         }
     }
-    
+
     cout << apples_on_house << endl;
     cout << oranges_on_house << endl;
 }
 
 int main()
 {
+    /* 
+        The first line contains two space-separated integers denoting the respective values of  and . 
+        The second line contains two space-separated integers denoting the respective values of  and . 
+        The third line contains two space-separated integers denoting the respective values of  and . 
+        The fourth line contains  space-separated integers denoting the respective distances that each apple falls from point . 
+        The fifth line contains  space-separated integers denoting the respective distances that each orange falls from point . 
+    */    
     string st_temp;
     getline(cin, st_temp);
 
