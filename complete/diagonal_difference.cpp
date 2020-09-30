@@ -10,7 +10,7 @@ int diagonalDifference(vector<vector<int>> arr)
     int pri_diag = 0;
     int sec_diag = 0;
 
-    /* Calculate primary diagonal. */
+    /* Calculate the sum of primary diagonal. */
     for (int row = 0; row < row_size; row++)
     {
         for (int col = 0; col < col_size; col++)
@@ -22,7 +22,7 @@ int diagonalDifference(vector<vector<int>> arr)
         }
     }
 
-    /* Calculate secondary diagonal. */
+    /* Calculate the sum of secondary diagonal. */
     for (int row = 0; row < row_size; row++)
     {
         for (int col = col_size - 1; col >= 0; col--)
